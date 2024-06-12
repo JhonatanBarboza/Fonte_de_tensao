@@ -20,7 +20,7 @@ O projeto foi desenvolvido com a finalidade de construir uma fonte de tensão aj
 
 
 
-## Funcionamento:
+## Funcionamento
 ### Transformação:
 
 ### Retificação:
