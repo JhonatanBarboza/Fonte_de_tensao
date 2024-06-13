@@ -58,9 +58,13 @@ O circuito a seguir ilustra um esquema simplificado da Fonte de Tensão Ajustáv
 
 ### Circuito PCB no EAGLE
 
-![EAGLE](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/f6423cae-ed9c-410f-b17a-ea4cb84fa888)
+Esquemático no EAGLE
 
 <img width="471" alt="EAGLE" src="https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/5d1f9cc0-5f10-4337-a463-9adec88f84d7">
+
+Board no EAGLE
+
+![EAGLE](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/f6423cae-ed9c-410f-b17a-ea4cb84fa888)
 
 imagem
 
