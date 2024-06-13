@@ -117,5 +117,5 @@ fonte:
 
 [Imagem 1](https://professor.pucgoias.edu.br/SiteDocente/admin/arquivosUpload/17742/material/Cap%204_ret%20onda%20completa_2017.pdf)
 
-[Imagem 2](https://github.com/JhonatanBarboza/Fonte_de_tensao/blob/main/assets/170869780/7f2dbf53-3dfd-416a-bf95-56d81e64f818)
+[Imagem 2](https://embarcados.com.br/aprenda-a-analisar-o-ripple-da-sua-fonte/)
 
