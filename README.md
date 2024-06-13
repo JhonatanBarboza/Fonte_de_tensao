@@ -45,6 +45,7 @@ Um diodo Zener é um tipo especial de diodo que permite o fluxo de corrente elé
 Um transistor é um componente eletrônico semicondutor utilizado para amplificar ou comutar sinais elétricos. Ele possui três terminais: emissor, base e coletor, e opera controlando a corrente entre o coletor e o emissor através da corrente aplicada na base. Em nosso projeto, o transistor é empregado para controlar a amplificação de sinais e a comutação, essencial para o funcionamento eficiente do circuito.
 
 
+
 ## Conversão de Energia AC para DC Regulada
 
 Neste projeto, o objetivo é converter um sinal elétrico de corrente alternada (AC) de 127V e 60Hz em uma voltagem contínua (DC) regulada entre 3V e 12V. Aqui estão os passos principais do processo:
@@ -55,8 +56,16 @@ Utilizamos um transformador para reduzir a alta voltagem AC de 127V para cerca d
 ### Retificação:
 Os diodos retificadores convertem o sinal AC em um sinal DC positivo, permitindo que a corrente flua em apenas um sentido e eliminando os ciclos negativos da onda AC.
 
+![retificação](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/207acd34-a62c-4003-acb8-71223c2aec8b)
+
+<sub>imagem 1
+
 ### Filtragem: 
 Um capacitor é empregado para suavizar o sinal DC retificado, reduzindo as variações de voltagem (ripple) e produzindo uma saída mais estável.
+
+![ripple-destaque-1](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/d602ba6c-241b-4aac-9589-914851832a39)
+
+<sub>imagem 2
 
 ### Regulação: 
 Um diodo Zener é utilizado para fixar a voltagem em 13V, eliminando pequenas flutuações indesejadas na saída. Além disso, um potenciômetro é ajustado para permitir a seleção da voltagem final entre 3V e 12V conforme necessário.
@@ -103,3 +112,10 @@ Board no EAGLE
 - João Gabriel Pieroli da Silva
 - Pedro Henrique de Sousa Prestes
 - Kevin Ryoji Nakashima
+
+fonte: 
+
+[Imagem 1](https://professor.pucgoias.edu.br/SiteDocente/admin/arquivosUpload/17742/material/Cap%204_ret%20onda%20completa_2017.pdf)
+
+[Imagem 2](https://github.com/JhonatanBarboza/Fonte_de_tensao/blob/main/assets/170869780/7f2dbf53-3dfd-416a-bf95-56d81e64f818)
+
