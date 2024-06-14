@@ -72,20 +72,82 @@ Um diodo Zener é utilizado para fixar a voltagem em 13V, eliminando pequenas fl
 
 
 ## Cálculos
-### Etapa do transformador:
 
+### Razão do Transformador
 
-### Ripple:
+Para trabalhar com uma saída de tensão de \( V_s = 24,4V \) (medido na prática) e um transformador com uma razão de 6,96, usamos a equação do transformador para calcular a tensão de entrada necessária.
 
+#### Tensão de Pico
 
-### Tensão média:
+Primeiramente, calculamos a tensão de pico V(pico) da entrada senoidal:
 
+$$ V_{\text{pico}} = V_{\text{entrada}} \times \sqrt{2} $$
 
+Onde:
+- V(entrada) é a tensão de entrada da tomada (127V).
+
+Substituindo os valores:
+
+$$ V_{\text{pico}} = 127V \times \sqrt{2} = 179,6V $$
+
+#### Razão do Transformador
+
+Desejando um transformador que produza uma tensão de saída (Vs) de 24,4V com uma razão de 6,96, utilizamos a relação do transformador:
+
+$$ \frac{1}{6,96} = \frac{V_s}{V_{\text{pico}}} $$
+
+Resolvendo para V(s):
+
+$$ V_s = \frac{V_{\text{pico}}}{6,96} $$
+
+Substituindo os valores:
+
+$$ V_s = \frac{179,6V}{6,96} \approx 25,8V $$
+
+Considerando que o zener precisa de uma tensão mínima de 0,7V cada, devemos subtrair 1,4V da tensão de saída:
+
+$$ V_s = 25,8V - 1,4V = 24,4V $$
+
+Portanto, a tensão de saída ajustada é de 24,4V.
+##
+### Cálculo da Tensão de Ripple (Vripple)
+
+Para calcular a tensão de ripple, consideramos uma tensão de ripple de 10% da tensão de saída.
+
+$$ V_{\text{ripple}} = 0,1 \times V_s $$
+
+Substituindo o valor da tensão de saída:
+
+$$ V_{\text{ripple}} = 0,1 \times 24,4V = 2,44V $$
+
+Portanto, a tensão de ripple é 2,44V.
+##
+### Cálculo da Tensão Média
+
+A tensão média V(média) é a média aritmética entre a tensão mínima e a tensão máxima, portanto:
+
+1. **Identificação dos limites de variação**:
+- Tensão mínima: 23,6V
+- Tensão máxima: 24,6V
+
+2. **Cálculo da Tensão Média**:
+- A tensão média é calculada pela média aritmética entre V(min) e V (max):
+
+$$ V_{\text{média}} = \frac{V_{\text{min}} + V_{\text{max}}}{2} $$
+
+   Substituindo os valores conhecidos:
+
+$$ V_{\text{média}} = \frac{23,6V + 24,6V}{2} $$
+
+$$ V_{\text{média}} = \frac{48,2V}{2} $$
+
+$$ V_{\text{média}} = 24,1V $$
+
+Portanto, a tensão média entre 23,6V e 24,6V é de aproximadamente 24,1V.
+##
 ### Correntes:
-
-
+##
 ### Capacitância:
-
 
 
 ### Circuito FALSTAD
