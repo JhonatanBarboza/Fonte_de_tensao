@@ -14,6 +14,7 @@ Este projeto demonstra como converter uma voltagem de corrente alternada (AC) de
 | 1     | [Diodo Zener](https://www.baudaeletronica.com.br/produto/diodo-zener-bzx55c-13v-05w.html)       | Diodo Zener BZX55C 13V/0,5W     |  R$ 0,49   |
 | 1     | [LED Azul](https://www.eletrogate.com/led-alto-brilho-5mm-azul)       | 2V/20mA      | R$ 1,49    |
 | 1     | [Transistor](https://www.proesi.com.br/bc368-transistor)       |  Transistor NPN - BC368      | R$ 0,43   |
+| 1     | [Protoboard](https://www.wjcomponentes.com.br/protoboard-400)        | 400 furos    | R$ 20,00  |
 
 Valor Total: R$ 59,77
 
