@@ -104,7 +104,7 @@ Substituindo os valores:
 
 $$ V_s = \frac{179,6V}{6,96} \approx 25,8V $$
 
-Considerando que o zener precisa de uma tensão mínima de 0,7V cada, devemos subtrair 1,4V da tensão de saída:
+Considerando que o diodo precisa de uma tensão mínima de 0,7V cada, devemos subtrair 1,4V da tensão de saída:
 
 $$ V_s = 25,8V - 1,4V = 24,4V $$
 
