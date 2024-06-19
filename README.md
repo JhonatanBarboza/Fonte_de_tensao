@@ -177,9 +177,9 @@ O valor comercial mais próximo do valor teórico é 470µF 50V, optamos por uma
 
 O circuito a seguir ilustra um esquema simplificado da Fonte de Tensão Ajustável projetada no falstad.
 
-![Circuito fonte de tensao](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/a9bb88d5-aff1-49af-bc49-cd9261177960)
+![circuito falstad](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/5f76e791-0470-4602-a101-40c79b3be0a7)
 
-[Link do Circuito](https://tinyurl.com/24obwzt2)
+[Link do Circuito](https://tinyurl.com/2chqac29)
 
 ### Circuito PCB no EAGLE
 
