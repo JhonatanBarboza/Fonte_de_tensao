@@ -173,9 +173,10 @@ O circuito a seguir ilustra um esquema simplificado da Fonte de Tensão Ajustáv
 
 ## Fotos do Projeto
 
-![min](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/e0ab747d-6cb8-43f0-be28-b8d9621ee088)
-![max](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/7d4522fb-9ad1-4026-95a0-f721d461094a)
+![foto 3v](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/0704cfba-b7d9-4f3b-9ca0-e9e629123a79)
+![foto 12v](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/7ae8948e-a423-482e-a266-e83101344b56)
 
+[video de funcionamento](https://www.youtube.com/shorts/4yctqx4uk1Y)
 
 ### Resposáveis
 - Jhonatan Barboza da Silva
