@@ -54,7 +54,7 @@ Um transistor é um componente eletrônico semicondutor utilizado para amplifica
 Neste projeto, o objetivo é converter um sinal elétrico de corrente alternada (AC) de 127V e 60Hz em uma voltagem contínua (DC) regulada entre 3V e 12V. Aqui estão os passos principais do processo:
 
 ### Transformação: 
-Utilizamos um transformador para reduzir a alta voltagem AC de 127V para cerca de 19,5V, mantendo o formato da onda AC intacto.
+Utilizamos um transformador para reduzir a alta voltagem AC de 127V para cerca de 20,9V, mantendo o formato da onda AC intacto.
 
 ### Retificação:
 Os diodos retificadores convertem o sinal AC em um sinal DC positivo, permitindo que a corrente flua em apenas um sentido e eliminando os ciclos negativos da onda AC.
@@ -78,7 +78,7 @@ Um diodo Zener é utilizado para fixar a voltagem em 13V, eliminando pequenas fl
 
 ### Razão do Transformador
 
-Para trabalhar com uma saída de tensão de Vs = 18V (medido na prática) e um transformador com uma razão de 8,5, usamos a equação do transformador para calcular a tensão de entrada necessária.
+Para trabalhar com uma saída de tensão de Vs = 18V e um transformador com uma razão de 8, usamos a equação do transformador para calcular a tensão de entrada necessária.
 
 #### Tensão de Pico
 
@@ -95,23 +95,23 @@ $$ V_{\text{pico}} = 127V \times \sqrt{2} = 179,6V $$
 
 #### Razão do Transformador
 
-Desejando um transformador que produza uma tensão de saída (Vs) de 18V com uma razão de 8,5, utilizamos a relação do transformador:
+Desejando um transformador que produza uma tensão de saída (Vs) de 18V com uma razão de 8, utilizamos a relação do transformador:
 
 $$ \frac{1}{6,96} = \frac{V_s}{V_{\text{pico}}} $$
 
 Resolvendo para V(s):
 
-$$ V_s = \frac{V_{\text{pico}}}{8,5} $$
+$$ V_s = \frac{V_{\text{pico}}}{8} $$
 
 Substituindo os valores:
 
-$$ V_s = \frac{179,6V}{8,5} \approx 21,1V $$
+$$ V_s = \frac{179,6V}{8} \approx 22,45V $$
 
 Considerando que o diodo precisa de uma tensão mínima de 0,7V cada, devemos subtrair 1,4V da tensão de saída:
 
-$$ V_s = 25,8V - 1,4V = 19,7V $$
+$$ V_s = 25,8V - 1,4V = 21,05 $$
 
-Portanto, a tensão de saída ajustada é de 19,7V.
+Portanto, a tensão de saída ajustada é de 21,05V.
 ##
 ### Cálculo da Tensão de Ripple (Vripple)
 
@@ -121,17 +121,17 @@ $$ V_{\text{ripple}} = 0,1 \times V_s $$
 
 Substituindo o valor da tensão de saída:
 
-$$ V_{\text{ripple}} = 0,1 \times 21,1V = 2,11V $$
+$$ V_{\text{ripple}} = 0,1 \times 21,05V = 2,1V $$
 
-Portanto, a tensão de ripple é 2,11V.
+Portanto, a tensão de ripple é 2,1V.
 ##
 ### Cálculo da Tensão Média
 
 A tensão média V(média) é a média aritmética entre a tensão mínima e a tensão máxima, portanto:
 
 1. **Identificação dos limites de variação**:
-- Tensão mínima: 19,3V
-- Tensão máxima: 19,7V
+- Tensão mínima: 20,7V
+- Tensão máxima: 21,1V
 
 2. **Cálculo da Tensão Média**:
 - A tensão média é calculada pela média aritmética entre V(min) e V (max):
@@ -140,13 +140,13 @@ $$ V_{\text{média}} = \frac{V_{\text{min}} + V_{\text{max}}}{2} $$
 
    Substituindo os valores conhecidos:
 
-$$ V_{\text{média}} = \frac{19,3V + 19,7V}{2} $$
+$$ V_{\text{média}} = \frac{20,7V + 21,1V}{2} $$
 
-$$ V_{\text{média}} = \frac{39V}{2} $$
+$$ V_{\text{média}} = \frac{41,8V}{2} $$
 
-$$ V_{\text{média}} = 19,5V $$
+$$ V_{\text{média}} = 20,9V $$
 
-Portanto, a tensão média entre 19,3V e 19,7V é de aproximadamente 19,5V.
+Portanto, a tensão média entre 20,7V e 21,1V é de aproximadamente 20,9V.
 ##
 ### Correntes:
 Assim, podemos calcular a corrente total:  (fazer os calculos)
