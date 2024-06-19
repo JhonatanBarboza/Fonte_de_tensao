@@ -18,7 +18,7 @@ Este projeto demonstra como converter uma voltagem de corrente alternada (AC) de
 | 1     | [Transistor](https://www.proesi.com.br/bc368-transistor)       |  Transistor NPN - BC368      | R$ 0,43   |
 | 1     | [Protoboard](https://www.wjcomponentes.com.br/protoboard-400)        | 400 furos    | R$ 20,00  |
 
-Valor Total: R$ 59,77
+Valor Total: R$ 59,91
 
 ### Vídeos do projeto funcionando
 
@@ -27,13 +27,13 @@ Valor Total: R$ 59,77
 
 ## Descrição dos Componentes
 ### Transformador: 
-Um transformador é um dispositivo elétrico que altera os níveis de tensão em um circuito, baseado no princípio da indução eletromagnética descoberto por Michael Faraday. Em nosso projeto, utilizamos um transformador de 12+12 V para obter uma tensão de 24 V.
+Um transformador é um dispositivo elétrico que altera os níveis de tensão em um circuito, baseado no princípio da indução eletromagnética descoberto por Michael Faraday. Em nosso projeto, utilizamos um transformador de 9+9 V para obter uma tensão de 18 V.
 
 ### Diodos:
 Componentes elétricos que permitem o fluxo de corrente em uma única direção são utilizados no projeto para montar uma ponte de diodos. Essa ponte atua como um retificador de tensão, aproveitando ambos os ciclos da corrente alternada.
 
 ### Resistores:
-Um resistor é um componente elétrico que limita o fluxo de corrente em um circuito. Ele dissipa energia na forma de calor e é utilizado para controlar níveis de tensão e corrente.  No nosso projeto foram utilizados dois resistores de 2.2k, um de 4.4k e um de 120k.
+Um resistor é um componente elétrico que limita o fluxo de corrente em um circuito. Ele dissipa energia na forma de calor e é utilizado para controlar níveis de tensão e corrente.  No nosso projeto foram utilizados resistores de 2k2, 1k8, 4k4 e um de 120.
 
 ### Capacitor:
 Um capacitor é um componente eletrônico que armazena energia elétrica em um campo elétrico, composto por duas placas condutoras separadas por um material dielétrico. Ele é usado para filtrar sinais, estabilizar tensão e armazenar energia temporariamente. Em nosso projeto, ele foi utilizado para reduzir o ripple do sistema.
@@ -54,7 +54,7 @@ Um transistor é um componente eletrônico semicondutor utilizado para amplifica
 Neste projeto, o objetivo é converter um sinal elétrico de corrente alternada (AC) de 127V e 60Hz em uma voltagem contínua (DC) regulada entre 3V e 12V. Aqui estão os passos principais do processo:
 
 ### Transformação: 
-Utilizamos um transformador para reduzir a alta voltagem AC de 127V para cerca de 24,6V, mantendo o formato da onda AC intacto.
+Utilizamos um transformador para reduzir a alta voltagem AC de 127V para cerca de 19,5V, mantendo o formato da onda AC intacto.
 
 ### Retificação:
 Os diodos retificadores convertem o sinal AC em um sinal DC positivo, permitindo que a corrente flua em apenas um sentido e eliminando os ciclos negativos da onda AC.
@@ -78,7 +78,7 @@ Um diodo Zener é utilizado para fixar a voltagem em 13V, eliminando pequenas fl
 
 ### Razão do Transformador
 
-Para trabalhar com uma saída de tensão de Vs = 18V (medido na prática) e um transformador com uma razão de 6,96, usamos a equação do transformador para calcular a tensão de entrada necessária.
+Para trabalhar com uma saída de tensão de Vs = 18V (medido na prática) e um transformador com uma razão de 8,5, usamos a equação do transformador para calcular a tensão de entrada necessária.
 
 #### Tensão de Pico
 
@@ -95,23 +95,23 @@ $$ V_{\text{pico}} = 127V \times \sqrt{2} = 179,6V $$
 
 #### Razão do Transformador
 
-Desejando um transformador que produza uma tensão de saída (Vs) de 18V com uma razão de 6,96, utilizamos a relação do transformador:
+Desejando um transformador que produza uma tensão de saída (Vs) de 18V com uma razão de 8,5, utilizamos a relação do transformador:
 
 $$ \frac{1}{6,96} = \frac{V_s}{V_{\text{pico}}} $$
 
 Resolvendo para V(s):
 
-$$ V_s = \frac{V_{\text{pico}}}{6,96} $$
+$$ V_s = \frac{V_{\text{pico}}}{8,5} $$
 
 Substituindo os valores:
 
-$$ V_s = \frac{179,6V}{6,96} \approx 25,8V $$
+$$ V_s = \frac{179,6V}{8,5} \approx 21,1V $$
 
 Considerando que o diodo precisa de uma tensão mínima de 0,7V cada, devemos subtrair 1,4V da tensão de saída:
 
-$$ V_s = 25,8V - 1,4V = 24,4V $$
+$$ V_s = 25,8V - 1,4V = 19,7V $$
 
-Portanto, a tensão de saída ajustada é de 24,4V.
+Portanto, a tensão de saída ajustada é de 19,7V.
 ##
 ### Cálculo da Tensão de Ripple (Vripple)
 
@@ -121,17 +121,17 @@ $$ V_{\text{ripple}} = 0,1 \times V_s $$
 
 Substituindo o valor da tensão de saída:
 
-$$ V_{\text{ripple}} = 0,1 \times 24,4V = 2,44V $$
+$$ V_{\text{ripple}} = 0,1 \times 21,1V = 2,11V $$
 
-Portanto, a tensão de ripple é 2,44V.
+Portanto, a tensão de ripple é 2,11V.
 ##
 ### Cálculo da Tensão Média
 
 A tensão média V(média) é a média aritmética entre a tensão mínima e a tensão máxima, portanto:
 
 1. **Identificação dos limites de variação**:
-- Tensão mínima: 23,6V
-- Tensão máxima: 24,6V
+- Tensão mínima: 19,3V
+- Tensão máxima: 19,7V
 
 2. **Cálculo da Tensão Média**:
 - A tensão média é calculada pela média aritmética entre V(min) e V (max):
@@ -140,13 +140,13 @@ $$ V_{\text{média}} = \frac{V_{\text{min}} + V_{\text{max}}}{2} $$
 
    Substituindo os valores conhecidos:
 
-$$ V_{\text{média}} = \frac{23,6V + 24,6V}{2} $$
+$$ V_{\text{média}} = \frac{19,3V + 19,7V}{2} $$
 
-$$ V_{\text{média}} = \frac{48,2V}{2} $$
+$$ V_{\text{média}} = \frac{39V}{2} $$
 
-$$ V_{\text{média}} = 24,1V $$
+$$ V_{\text{média}} = 19,5V $$
 
-Portanto, a tensão média entre 23,6V e 24,6V é de aproximadamente 24,1V.
+Portanto, a tensão média entre 19,3V e 19,7V é de aproximadamente 19,5V.
 ##
 ### Correntes:
 ##
