@@ -5,11 +5,13 @@ Este projeto demonstra como converter uma voltagem de corrente alternada (AC) de
 ## Componentes Eletrônicos
 | Quantidade     | Componentes | Especificações | Valor |
 | ---      | ---       | ---      | ---     |
-| 1 | [Transformador Bivolt](https://www.baudaeletronica.com.br/produto/transformador-12v-1a-110220vac.html)  | 12V/24V     |  R$ 41,90   |
+| 1 | [Transformador Bivolt](https://www.radeleletronica.com.br/transformador-9-9v-2a-trafo-tr-02-009)  | 9V/18V     |  R$ 41,90   |
 | 1 | [Ponte Retificadora](https://www.usinainfo.com.br/ponte-retificadora/ponte-retificadora-2w10-3938.html) | KBPC3510 | R$ 3,78 |
 | 1     | [Capacitor](https://www.baudaeletronica.com.br/produto/capacitor-eletrolitico-470uf-16v-105c.html)        | 470uF / 50V     | R$ 4,27  |
 | 1     | [Potenciômetro](https://www.magazineluiza.com.br/potenciometro-linear-5k-l20-jhs/p/kkjcfch767/cj/ptct/)        | Resistência: 5K  | R$ 6,74    |
 | 4     | [Resistor 2k2](https://www.edfcomponentes.com.br/resistor/resistor-2k2-14w-5-2200-ohms-cr25)     | 2200 Ω 1/4W    | R$ 0,07  |
+| 4     | [Resistor 1k8](https://www.proesi.com.br/resistor-carbono-1w-1k8)     | 1800 Ω 1/4W    | R$ 0,07  |
+| 4     | [Resistor 4k4](https://www.ryndackcomponentes.com.br/resistor-4-3-5-1-4w-cr25-4r3-4-3r.html)     | 4400 Ω 1/4W    | R$ 0,07  |
 | 1     | [Resistor 120 Ω](https://www.proesi.com.br/resistor-precisao-1-1-4w-120r)     | 120 Ω 1 W    | R$ 0,39   |
 | 1     | [Diodo Zener](https://www.baudaeletronica.com.br/produto/diodo-zener-bzx55c-13v-05w.html)       | Diodo Zener BZX55C 13V/0,5W     |  R$ 0,49   |
 | 1     | [LED Azul](https://www.eletrogate.com/led-alto-brilho-5mm-azul)       | 2V/20mA      | R$ 1,49    |
@@ -76,7 +78,7 @@ Um diodo Zener é utilizado para fixar a voltagem em 13V, eliminando pequenas fl
 
 ### Razão do Transformador
 
-Para trabalhar com uma saída de tensão de \( V_s = 24,4V \) (medido na prática) e um transformador com uma razão de 6,96, usamos a equação do transformador para calcular a tensão de entrada necessária.
+Para trabalhar com uma saída de tensão de Vs = 18V (medido na prática) e um transformador com uma razão de 6,96, usamos a equação do transformador para calcular a tensão de entrada necessária.
 
 #### Tensão de Pico
 
@@ -93,7 +95,7 @@ $$ V_{\text{pico}} = 127V \times \sqrt{2} = 179,6V $$
 
 #### Razão do Transformador
 
-Desejando um transformador que produza uma tensão de saída (Vs) de 24,4V com uma razão de 6,96, utilizamos a relação do transformador:
+Desejando um transformador que produza uma tensão de saída (Vs) de 18V com uma razão de 6,96, utilizamos a relação do transformador:
 
 $$ \frac{1}{6,96} = \frac{V_s}{V_{\text{pico}}} $$
 
