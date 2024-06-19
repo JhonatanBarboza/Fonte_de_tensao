@@ -149,8 +149,27 @@ $$ V_{\text{média}} = 19,5V $$
 Portanto, a tensão média entre 19,3V e 19,7V é de aproximadamente 19,5V.
 ##
 ### Correntes:
+
+$$ i_{LED} = \frac{V_{máxs}-V_{LED}}{R_{LED}} = \frac{12,1}{4400} \approx 2,75 mA $$
+
+$$ i_{ZENNER} = \frac{V_{máxs}-V_{ZENNER}}{R_{ZENNER}} = \frac{22,18 - 12,9}{2200} \approx 4,22 mA $$
+
+$$ i_{POTENCIÔMETRO} = \frac{V_{máxs}}{R_{POTENCIÔMETRO}} = \frac{22,18}{5000} \approx 4,43 mA $$
+
+$$ i_{TRANSISTOR} = \frac{V_{máxs}}{R_{TRANSISTOR}} = \frac{23,18}{230} \approx 100,07 mA $$
+
+Logo, 
+
+$$ i_{TOTAL} = 2,75 + 4,22 + 4,43 + 100,07 = 112,18 mA $$
+
 ##
 ### Capacitância:
+
+Por fim, no cálculo da capacitância usamos f = 120 Hz pois a saída da frequência é o dobro da entrada para uma retificação em onda completa na ponte:
+
+$$ C = \frac{i_{TOTAL}}{f \cdot V_{ripple}} = \frac{112,18 \times 10^{-3}}{120 \times 2,44} \approx 383,12 µF $$
+
+O valor comercial mais próximo do valor teórico é 470µF 50V, optamos por uma margem de 22,6% acima do teórico.
 
 
 ### Circuito FALSTAD
