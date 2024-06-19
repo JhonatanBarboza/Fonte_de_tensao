@@ -149,6 +149,7 @@ $$ V_{\text{média}} = 19,5V $$
 Portanto, a tensão média entre 19,3V e 19,7V é de aproximadamente 19,5V.
 ##
 ### Correntes:
+Assim, podemos calcular a corrente total:  (fazer os calculos)
 
 $$ i_{LED} = \frac{V_{máxs}-V_{LED}}{R_{LED}} = \frac{12,1}{4400} \approx 2,75 mA $$
 
@@ -171,7 +172,7 @@ $$ C = \frac{i_{TOTAL}}{f \cdot V_{ripple}} = \frac{112,18 \times 10^{-3}}{120 \
 
 O valor comercial mais próximo do valor teórico é 470µF 50V, optamos por uma margem de 22,6% acima do teórico.
 
-
+##
 ### Circuito FALSTAD
 
 O circuito a seguir ilustra um esquema simplificado da Fonte de Tensão Ajustável projetada no falstad.
