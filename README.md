@@ -54,7 +54,7 @@ Um transistor é um componente eletrônico semicondutor utilizado para amplifica
 Neste projeto, o objetivo é converter um sinal elétrico de corrente alternada (AC) de 127V e 60Hz em uma voltagem contínua (DC) regulada entre 3V e 12V. Aqui estão os passos principais do processo:
 
 ### Transformação: 
-Utilizamos um transformador para reduzir a alta voltagem AC de 127V para cerca de 20,9V, mantendo o formato da onda AC intacto.
+Utilizamos um transformador para reduzir a alta voltagem AC de 127V para cerca de 21,5V, mantendo o formato da onda AC intacto.
 
 ### Retificação:
 Os diodos retificadores convertem o sinal AC em um sinal DC positivo, permitindo que a corrente flua em apenas um sentido e eliminando os ciclos negativos da onda AC.
@@ -149,28 +149,37 @@ $$ V_{\text{média}} = 20,9V $$
 Portanto, a tensão média entre 20,7V e 21,1V é de aproximadamente 20,9V.
 ##
 ### Correntes:
-Assim, podemos calcular a corrente total:  (fazer os calculos)
 
-$$ i_{LED} = \frac{V_{máxs}-V_{LED}}{R_{LED}} = \frac{12,1}{4400} \approx 2,75 mA $$
+Para calcular a corrente total, realizamos os seguintes cálculos:
 
-$$ i_{ZENNER} = \frac{V_{máxs}-V_{ZENNER}}{R_{ZENNER}} = \frac{22,18 - 12,9}{2200} \approx 4,22 mA $$
+1. Corrente através do LED:
 
-$$ i_{POTENCIÔMETRO} = \frac{V_{máxs}}{R_{POTENCIÔMETRO}} = \frac{22,18}{5000} \approx 4,43 mA $$
+$$ i_{LED} = \frac{V_{máxs} - V_{LED}}{R_{LED}} = \frac{21,1V - 9V}{4400 \, \Omega} \approx 2,75 \, mA $$
 
-$$ i_{TRANSISTOR} = \frac{V_{máxs}}{R_{TRANSISTOR}} = \frac{23,18}{230} \approx 100,07 mA $$
+2. Corrente através do diodo Zener:
 
-Logo, 
+$$ i_{ZENNER} = \frac{V_{máxs} - V_{ZENNER}}{R_{ZENNER}} = \frac{21,1V - 12,9V}{2200 \, \Omega} \approx 3,72 \, mA $$
 
-$$ i_{TOTAL} = 2,75 + 4,22 + 4,43 + 100,07 = 112,18 mA $$
+3. Corrente através do potenciômetro:
+
+$$ i_{POTENCIÔMETRO} = \frac{V_{máxs}}{R_{POTENCIÔMETRO}} = \frac{21,1V}{5000 \, \Omega} \approx 4,22 \, mA $$
+
+4. Corrente através do transistor:
+
+$$ i_{TRANSISTOR} = \frac{V_{máxs}}{R_{TRANSISTOR}} = \frac{21,1V}{230 \, \Omega} \approx 91,73 \, mA $$
+
+Somando todas as correntes, obtemos a corrente total:
+
+$$ i_{TOTAL} = 2,75 \, mA + 3,72 \, mA + 4,22 \, mA + 91,73 \, mA = 102,42 \, mA $$
 
 ##
 ### Capacitância:
 
-Por fim, no cálculo da capacitância usamos f = 120 Hz pois a saída da frequência é o dobro da entrada para uma retificação em onda completa na ponte:
+Para o cálculo da capacitância, usamos a frequência f = 120 Hz, pois a frequência de saída é o dobro da frequência de entrada devido à retificação em onda completa na ponte:
 
-$$ C = \frac{i_{TOTAL}}{f \cdot V_{ripple}} = \frac{112,18 \times 10^{-3}}{120 \times 2,44} \approx 383,12 µF $$
+$$ C = \frac{i_{TOTAL}}{f \cdot V_{ripple}} = \frac{102,42 \times 10^{-3} \, A}{120 \, Hz \cdot 2,1 \, V} \approx 405,47 \, \mu F $$
 
-O valor comercial mais próximo do valor teórico é 470µF 50V, optamos por uma margem de 22,6% acima do teórico.
+O valor comercial mais próximo do valor teórico é 470 mu F 50. Optamos por um valor com uma margem de aproximadamente 16% acima do valor teórico.
 
 ##
 ### Circuito FALSTAD
