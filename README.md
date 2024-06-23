@@ -97,7 +97,7 @@ $$ V_{\text{pico}} = 127V \times \sqrt{2} = 179,6V $$
 
 Desejando um transformador que produza uma tensão de saída (Vs) de 18V com uma razão de 8, utilizamos a relação do transformador:
 
-$$ \frac{1}{6,96} = \frac{V_s}{V_{\text{pico}}} $$
+$$ \frac{1}{8} = \frac{V_s}{V_{\text{pico}}} $$
 
 Resolvendo para V(s):
 
@@ -154,32 +154,32 @@ Para calcular a corrente total, realizamos os seguintes cálculos:
 
 1. Corrente através do LED:
 
-$$ i_{LED} = \frac{V_{máxs} - V_{LED}}{R_{LED}} = \frac{21,1V - 9V}{4400 \, \Omega} \approx 2,75 \, mA $$
+$$ i_{LED} = \frac{V_{máxs} - V_{LED}}{R_{LED}} = \frac{21,1V - 9V}{4400 \ \Omega} \approx 2,75 \ mA $$
 
 2. Corrente através do diodo Zener:
 
-$$ i_{ZENNER} = \frac{V_{máxs} - V_{ZENNER}}{R_{ZENNER}} = \frac{21,1V - 12,9V}{2200 \, \Omega} \approx 3,72 \, mA $$
+$$ i_{ZENNER} = \frac{V_{máxs} - V_{ZENNER}}{R_{ZENNER}} = \frac{21,1V - 12,9V}{2200 \ \Omega} \approx 3,72 \ mA $$
 
 3. Corrente através do potenciômetro:
 
-$$ i_{POTENCIÔMETRO} = \frac{V_{máxs}}{R_{POTENCIÔMETRO}} = \frac{21,1V}{5000 \, \Omega} \approx 4,22 \, mA $$
+$$ i_{POTENCIÔMETRO} = \frac{V_{máxs}}{R_{POTENCIÔMETRO}} = \frac{21,1V}{5000 \ \Omega} \approx 4,22 \ mA $$
 
 4. Corrente através do transistor:
 
-$$ i_{TRANSISTOR} = \frac{V_{máxs}}{R_{TRANSISTOR}} = \frac{21,1V}{230 \, \Omega} \approx 91,73 \, mA $$
+$$ i_{TRANSISTOR} = \frac{V_{máxs}}{R_{TRANSISTOR}} = \frac{21,1V}{230 \ \Omega} \approx 91,73 \ mA $$
 
 Somando todas as correntes, obtemos a corrente total:
 
-$$ i_{TOTAL} = 2,75 \, mA + 3,72 \, mA + 4,22 \, mA + 91,73 \, mA = 102,42 \, mA $$
+$$ i_{TOTAL} = 2,75 \ mA + 3,72 \ mA + 4,22 \ mA + 91,73 \ mA = 102,42 \ mA $$
 
 ##
 ### Capacitância:
 
 Para o cálculo da capacitância, usamos a frequência f = 120 Hz, pois a frequência de saída é o dobro da frequência de entrada devido à retificação em onda completa na ponte:
 
-$$ C = \frac{i_{TOTAL}}{f \cdot V_{ripple}} = \frac{102,42 \times 10^{-3} \, A}{120 \, Hz \cdot 2,1 \, V} \approx 405,47 \, \mu F $$
+$$ C = \frac{i_{TOTAL}}{f \cdot V_{ripple}} = \frac{102,42 \times 10^{-3} \ A}{120 \ Hz \cdot 2,1 \ V} \approx 405,47 \ \mu F $$
 
-O valor comercial mais próximo do valor teórico é 470 mu F 50. Optamos por um valor com uma margem de aproximadamente 16% acima do valor teórico.
+O valor comercial mais próximo do valor teórico é 470 µF 50V. Optamos por um valor com uma margem de aproximadamente 16% acima do valor teórico.
 
 ##
 ### Circuito FALSTAD
