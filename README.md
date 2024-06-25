@@ -188,7 +188,7 @@ O circuito a seguir ilustra um esquema simplificado da Fonte de Tensão Ajustáv
 
 ![circuit falstad5v](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/ca935edc-34fa-4860-abf8-d483f4b98853)
 
-[Link do Circuito](vhttps://tinyurl.com/ykv897ex)
+[Link do Circuito](https://tinyurl.com/yoqae22b)
 
 ### Circuito PCB no EAGLE
 
