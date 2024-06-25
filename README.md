@@ -24,6 +24,7 @@ Valor Total: R$ 59,91
 
 [video]
 
+![foto1](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/62e2370b-760d-46a4-bb6e-be6d3363a5b8)
 
 ## Descrição dos Componentes
 ### Transformador: 
@@ -95,23 +96,23 @@ $$ V_{\text{pico}} = 127V \times \sqrt{2} = 179,6V $$
 
 #### Razão do Transformador
 
-Desejando um transformador que produza uma tensão de saída (Vs) de 18V com uma razão de 8, utilizamos a relação do transformador:
+Desejando um transformador que produza uma tensão de saída (Vs) de 18V com uma razão de 7, utilizamos a relação do transformador:
 
 $$ \frac{1}{8} = \frac{V_s}{V_{\text{pico}}} $$
 
 Resolvendo para V(s):
 
-$$ V_s = \frac{V_{\text{pico}}}{8} $$
+$$ V_s = \frac{V_{\text{pico}}}{7} $$
 
 Substituindo os valores:
 
-$$ V_s = \frac{179,6V}{8} \approx 22,45V $$
+$$ V_s = \frac{179,6V}{7} \approx 25,65V $$
 
 Considerando que o diodo precisa de uma tensão mínima de 0,7V cada, devemos subtrair 1,4V da tensão de saída:
 
-$$ V_s = 25,8V - 1,4V = 21,05 $$
+$$ V_s = 25,65V - 1,4V = 24,25 $$
 
-Portanto, a tensão de saída ajustada é de 21,05V.
+Portanto, a tensão de saída ajustada é de 24,25V.
 ##
 ### Cálculo da Tensão de Ripple (Vripple)
 
@@ -121,17 +122,17 @@ $$ V_{\text{ripple}} = 0,1 \times V_s $$
 
 Substituindo o valor da tensão de saída:
 
-$$ V_{\text{ripple}} = 0,1 \times 21,05V = 2,1V $$
+$$ V_{\text{ripple}} = 0,1 \times 24,25V = 2,4V $$
 
-Portanto, a tensão de ripple é 2,1V.
+Portanto, a tensão de ripple é 2,4V.
 ##
 ### Cálculo da Tensão Média
 
 A tensão média V(média) é a média aritmética entre a tensão mínima e a tensão máxima, portanto:
 
 1. **Identificação dos limites de variação**:
-- Tensão mínima: 20,7V
-- Tensão máxima: 21,1V
+- Tensão mínima: 23V
+- Tensão máxima: 24,25V
 
 2. **Cálculo da Tensão Média**:
 - A tensão média é calculada pela média aritmética entre V(min) e V (max):
@@ -140,13 +141,13 @@ $$ V_{\text{média}} = \frac{V_{\text{min}} + V_{\text{max}}}{2} $$
 
    Substituindo os valores conhecidos:
 
-$$ V_{\text{média}} = \frac{20,7V + 21,1V}{2} $$
+$$ V_{\text{média}} = \frac{23V + 24,25V}{2} $$
 
-$$ V_{\text{média}} = \frac{41,8V}{2} $$
+$$ V_{\text{média}} = \frac{47,25V}{2} $$
 
-$$ V_{\text{média}} = 20,9V $$
+$$ V_{\text{média}} = 23,62V $$
 
-Portanto, a tensão média entre 20,7V e 21,1V é de aproximadamente 20,9V.
+Portanto, a tensão média entre 23V e 24,25V é de aproximadamente 23,62V.
 ##
 ### Correntes:
 
@@ -154,32 +155,32 @@ Para calcular a corrente total, realizamos os seguintes cálculos:
 
 1. Corrente através do LED:
 
-$$ i_{LED} = \frac{V_{máxs} - V_{LED}}{R_{LED}} = \frac{21,1V - 9V}{4400 \ \Omega} \approx 2,75 \ mA $$
+$$ i_{LED} = \frac{V_{máxs} - V_{LED}}{R_{LED}} = \frac{24,25V - 9V}{4400 \ \Omega} \approx 3,46 \ mA $$
 
 2. Corrente através do diodo Zener:
 
-$$ i_{ZENNER} = \frac{V_{máxs} - V_{ZENNER}}{R_{ZENNER}} = \frac{21,1V - 12,9V}{2200 \ \Omega} \approx 3,72 \ mA $$
+$$ i_{ZENNER} = \frac{V_{máxs} - V_{ZENNER}}{R_{ZENNER}} = \frac{24,25V - 12,9V}{2200 \ \Omega} \approx 5,15 \ mA $$
 
 3. Corrente através do potenciômetro:
 
-$$ i_{POTENCIÔMETRO} = \frac{V_{máxs}}{R_{POTENCIÔMETRO}} = \frac{21,1V}{5000 \ \Omega} \approx 4,22 \ mA $$
+$$ i_{POTENCIÔMETRO} = \frac{V_{máxs}}{R_{POTENCIÔMETRO}} = \frac{24,25V}{5000 \ \Omega} \approx 4,85 \ mA $$
 
 4. Corrente através do transistor:
 
-$$ i_{TRANSISTOR} = \frac{V_{máxs}}{R_{TRANSISTOR}} = \frac{21,1V}{230 \ \Omega} \approx 91,73 \ mA $$
+$$ i_{TRANSISTOR} = \frac{V_{máxs}}{R_{TRANSISTOR}} = \frac{24,25V}{230 \ \Omega} \approx 105,43 \ mA $$
 
 Somando todas as correntes, obtemos a corrente total:
 
-$$ i_{TOTAL} = 2,75 \ mA + 3,72 \ mA + 4,22 \ mA + 91,73 \ mA = 102,42 \ mA $$
+$$ i_{TOTAL} = 3,46 \ mA + 5,15 \ mA + 4,85 \ mA + 105,43 \ mA = 118,89 \ mA $$
 
 ##
 ### Capacitância:
 
 Para o cálculo da capacitância, usamos a frequência f = 120 Hz, pois a frequência de saída é o dobro da frequência de entrada devido à retificação em onda completa na ponte:
 
-$$ C = \frac{i_{TOTAL}}{f \cdot V_{ripple}} = \frac{102,42 \times 10^{-3} \ A}{120 \ Hz \cdot 2,1 \ V} \approx 405,47 \ \mu F $$
+$$ C = \frac{i_{TOTAL}}{f \cdot V_{ripple}} = \frac{118,89 \times 10^{-3} \ A}{120 \ Hz \cdot 2,1 \ V} \approx 412,81 \ \mu F $$
 
-O valor comercial mais próximo do valor teórico é 470 µF 50V. Optamos por um valor com uma margem de aproximadamente 16% acima do valor teórico.
+O valor comercial mais próximo do valor teórico é 470 µF 50V. Optamos por um valor com uma margem de aproximadamente 13,8% acima do valor teórico.
 
 ##
 ### Circuito FALSTAD
