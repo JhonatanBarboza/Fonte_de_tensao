@@ -128,26 +128,33 @@ Portanto, a tensão de ripple é 2,4V.
 ##
 ### Cálculo da Tensão Média
 
-A tensão média V(média) é a média aritmética entre a tensão mínima e a tensão máxima, portanto:
+Vamos refazer os cálculos utilizando a fórmula ajustada para a tensão média com um ripple de 10%.
+
+A fórmula é:
+
+$$ V_s = V_{\text{pico}} \times \left(1 - \frac{\text{ripple}}{2}\right) $$
 
 1. **Identificação dos limites de variação**:
-- Tensão mínima: 23V
-- Tensão máxima: 24,25V
+   - Tensão máxima: 24,25V
 
-2. **Cálculo da Tensão Média**:
-- A tensão média é calculada pela média aritmética entre V(min) e V (max):
+2. **Cálculo da Tensão Média com Ripple**:
+   - O ripple é de 10%, portanto:
+     
+$$ \text{ripple} = 0.10 $$
 
-$$ V_{\text{média}} = \frac{V_{\text{min}} + V_{\text{max}}}{2} $$
+   Usando a fórmula:
+   
+$$ V_s = V_{\text{pico}} \times \left(1 - \frac{0.10}{2}\right) $$
+$$ V_s = V_{\text{pico}} \times (1 - 0.05) $$
+$$ V_s = V_{\text{pico}} \times 0.95 $$
 
-   Substituindo os valores conhecidos:
+   Considerando a tensão máxima como a tensão de pico V pico:
 
-$$ V_{\text{média}} = \frac{23V + 24,25V}{2} $$
+$$ V_s = 24.25V \times 0.95 $$
+$$ V_s = 23.0375V $$
 
-$$ V_{\text{média}} = \frac{47,25V}{2} $$
+Portanto, a tensão média considerando um ripple de 10% e uma tensão máxima de 24,25V é aproximadamente 23,04V.
 
-$$ V_{\text{média}} = 23,62V $$
-
-Portanto, a tensão média entre 23V e 24,25V é de aproximadamente 23,62V.
 ##
 ### Correntes:
 
