@@ -55,7 +55,7 @@ Um transistor é um componente eletrônico semicondutor utilizado para amplifica
 Neste projeto, o objetivo é converter um sinal elétrico de corrente alternada (AC) de 127V e 60Hz em uma voltagem contínua (DC) regulada entre 3V e 12V. Aqui estão os passos principais do processo:
 
 ### Transformação: 
-Utilizamos um transformador para reduzir a alta voltagem AC de 127V para cerca de 21,5V, mantendo o formato da onda AC intacto.
+Utilizamos um transformador para reduzir a alta voltagem AC de 127V para cerca de 24,25V, mantendo o formato da onda AC intacto.
 
 ### Retificação:
 Os diodos retificadores convertem o sinal AC em um sinal DC positivo, permitindo que a corrente flua em apenas um sentido e eliminando os ciclos negativos da onda AC.
@@ -79,7 +79,7 @@ Um diodo Zener é utilizado para fixar a voltagem em 13V, eliminando pequenas fl
 
 ### Razão do Transformador
 
-Para trabalhar com uma saída de tensão de Vs = 18V e um transformador com uma razão de 8, usamos a equação do transformador para calcular a tensão de entrada necessária.
+Para trabalhar com uma saída de tensão de Vs = 18V e um transformador com uma razão de 7, usamos a equação do transformador para calcular a tensão de entrada necessária.
 
 #### Tensão de Pico
 
@@ -98,7 +98,7 @@ $$ V_{\text{pico}} = 127V \times \sqrt{2} = 179,6V $$
 
 Desejando um transformador que produza uma tensão de saída (Vs) de 18V com uma razão de 7, utilizamos a relação do transformador:
 
-$$ \frac{1}{8} = \frac{V_s}{V_{\text{pico}}} $$
+$$ \frac{1}{7} = \frac{V_s}{V_{\text{pico}}} $$
 
 Resolvendo para V(s):
 
