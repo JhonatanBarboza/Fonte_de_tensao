@@ -22,7 +22,7 @@ Valor Total: R$ 59,91
 
 ### Vídeos do projeto funcionando
 
-[video]
+https://youtu.be/9Ps8AaCYR2c
 
 ![foto1](https://github.com/JhonatanBarboza/Fonte_de_tensao/assets/170869780/62e2370b-760d-46a4-bb6e-be6d3363a5b8)
 
