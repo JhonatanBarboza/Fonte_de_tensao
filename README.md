@@ -22,7 +22,7 @@ Valor Total: R$ 59,91
 
 ### Vídeo do projeto funcionando
 
-https://youtu.be/9Ps8AaCYR2c
+[vídeo explicando o projeto](https://youtu.be/9Ps8AaCYR2c)
 
 
 
